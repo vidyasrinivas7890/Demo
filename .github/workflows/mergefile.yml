@@ -2,7 +2,7 @@ name: Auto Merge QA to Master
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
     branches:
       - main
 
@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   auto-merge:
+    if: github.event.pull_request.head.ref == 'testbranch'
     runs-on: ubuntu-latest
 
     steps:
