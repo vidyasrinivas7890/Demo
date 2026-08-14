@@ -20,7 +20,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh pr merge  5316204182c6d1694e1535c3215cfb815e1208c6 \
+          gh pr merge f4630bf62a0ec4eb73e18fe74fb6043d2a2c3cb0  \
             --repo "vidyasrinivas7890/Learning" \
             --auto \
             --squash
